@@ -43,7 +43,7 @@ fun MetroMapScreen() {
         .pointerInput(Unit) {
             detectTransformGestures { _, pan, zoom, _ ->
                 // Update scale and offset based on user gestures
-                scale = (scale * zoom).coerceIn(0.5f, 3f) // Limit the scale between 0.5x and 3x
+                scale = (scale * zoom).coerceIn(1f, 7f) // Limit the scale between 1x and 5x
                 offsetX += pan.x
                 offsetY += pan.y
             }
